@@ -1,16 +1,14 @@
 :root {
-  --clr-accent-500: hsl(12, 60%, 45%);
-  --clr-accent-400: hsl(12, 88%, 59%);
-  --clr-accent-300: hsl(12, 88%, 75%);
-  --clr-accent-100: hsl(13, 100%, 96%);
+  
+  --clr-accent-100: hsl(351, 99%, 44%);
+  --clr-accent-200: hsl(351, 99%, 36%);
 
-  --clr-primary-400: hsl(228, 39%, 23%);
+  --clr-primary-100: hsl(0, 0%, 100%);
+  --clr-primary-200: hsl(0, 0%, 95%);
 
-  --clr-neutral-900: hsl(232, 12%, 13%);
-  --clr-neutral-200: hsl(0 0% 97%);
-  --clr-neutral-100: hsl(0 0% 100%);
-
-  --ff-primary: "Be Vietnam Pro", sans-serif;
+  --clr-primary-dark: hsl(0, 0%, 0%);
+  
+  --ff-primary: "Open Sans", sans-serif;
 
   --ff-body: var(--ff-primary);
   --ff-heading: var(--ff-primary);
@@ -44,13 +42,15 @@
   --size-900: 5rem;
 }
 
+
 @media (min-width: 50em) {
   :root {
     --fs-body: var(--fs-500);
     --fs-primary-heading: var(--fs-900);
     --fs-secondary-heading: var(--fs-800);
 
-    --fs-nav: var(--fs-300);
+    --fs-nav: var(--fs-500);
+    
   }
 }
 
@@ -125,7 +125,7 @@ svg {
 /* navigation */
 
 .primary-header {
-  padding-top: var(--size-700);
+  padding-top: var(--size-200);
 }
 
 .nav-wrapper {
@@ -158,6 +158,11 @@ svg {
   color: var(--clr-accent-400);
 }
 
+.header_img {
+  width: auto;
+  height: 100px;
+}
+
 @media (max-width: 50em) {
   .primary-navigation {
     display: none;
@@ -167,9 +172,8 @@ svg {
     inset: 7rem var(--size-400) auto;
     max-width: 25rem;
     margin-left: auto;
-    background: var(--clr-neutral-100);
+    background: var(--clr-accent-100);
     border-radius: var(--size-100);
-    box-shadow: 0 0 0.75em rgb(0, 0, 0, 0.05);
   }
 
   .primary-header[data-overlay]::before {
@@ -256,4 +260,160 @@ svg {
 
 .footer-nav a:is(:hover, :focus) {
   color: var(--clr-accent-400);
+}
+
+/* Utility classes */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+
+.container {
+  --max-width: 1110px;
+  --container-padding: 1rem;
+
+  width: min(var(--max-width), 100% - (var(--container-padding) * 2));
+  margin-inline: auto;
+}
+
+.even-columns {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 50em) {
+  .even-columns {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+}
+
+.vertical-align-center {
+  align-items: center;
+}
+
+.justify-self-end {
+  justify-self: end;
+}
+
+@media (min-width: 50em) {
+  .justify-self-end-md {
+    justify-self: end;
+  }
+}
+
+:where(.flow :not(:first-child)) {
+  margin-top: var(--flow-spacer, 3em);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-center p {
+  margin-inline: auto;
+}
+
+@media (max-width: 50em) {
+  .text-center-sm-only {
+    text-align: center;
+  }
+
+  .text-center-sm-only p {
+    margin-inline: auto;
+  }
+}
+
+.text-primary-100 {
+  color: var(--clr-primary-400);
+}
+.text-primary-200 {
+  color: var(--clr-primary-400);
+}
+.text-accent-100 {
+  color: var(--clr-accent-100);
+}
+.text-accent-200 {
+  color: var(--clr-accent-200);
+}
+.text-primary-dark {
+  color: var(--clr-primary-dark);
+}
+
+
+.bg-primary-100 {
+  background-color: var(--clr-primary-100);
+}
+.bg-primary-200 {
+  background-color: var(--clr-primary-200);
+}
+.bg-primary-dark {
+  background-color: var(--clr-primary-dark);
+}
+.bg-accent-100 {
+  background-color: var(--clr-accent-100);
+}
+.bg-accent-200 {
+  background-color: var(--clr-accent-200);
+}
+
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+.fw-semi-bold {
+  font-weight: var(--fw-semi-bold);
+}
+.fw-regular {
+  font-weight: var(--fw-regular);
+}
+
+.fs-primary-heading {
+  font-size: var(--fs-primary-heading);
+  line-height: 1.1;
+}
+.fs-secondary-heading {
+  font-size: var(--fs-secondary-heading);
+  line-height: 1.1;
+}
+
+.fs-300 {
+  font-size: var(--fs-300);
+}
+.fs-400 {
+  font-size: var(--fs-400);
+}
+.fs-500 {
+  font-size: var(--fs-500);
+}
+.fs-600 {
+  font-size: var(--fs-600);
+}
+
+.padding-block-900 {
+  padding-block: var(--size-900);
+}
+.padding-block-700 {
+  padding-block: var(--size-700);
+}
+
+.margin-bottom-700 {
+  margin-block-end: var(--size-700);
+}
+
+.display-sm-none {
+  display: none;
+}
+
+@media (min-width: 50em) {
+  .display-md-inline-flex {
+    display: inline-flex;
+  }
 }
