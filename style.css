@@ -236,6 +236,7 @@ svg {
 .primary-footer-wrapper {
   display: grid;
   gap: var(--size-700);
+  color: var(--clr-primary-100);
   grid-template-areas:
     "sponsors"
     "nav"
@@ -248,10 +249,12 @@ svg {
 
 .primary-footer-sponsors {
   grid-area: sponsors;
+
 }
 
 .primary-footer-contact {
   grid-area: contact;
+
 }
 
 @media (min-width: 50em) {
@@ -274,12 +277,12 @@ svg {
 }
 
 .footer-nav a {
-  color: var(--clr-primary-400);
+  color: var(--clr-primary-100);
   text-decoration: none;
 }
 
 .footer-nav a:is(:hover, :focus) {
-  color: var(--clr-accent-400);
+  color: var(--clr-accent-100);
 }
 
 /* Utility classes */
