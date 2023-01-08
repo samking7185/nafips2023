@@ -164,17 +164,63 @@ svg {
 
 .nav-list a {
   text-decoration: none;
-  color: var(--clr-primary-400);
+  color: var(--clr-accent-100);
 }
 
 .nav-list a:hover,
 .nav-list a:focus {
-  color: var(--clr-accent-400);
+  color: var(--clr-primary-dark);
 }
 
 .header_img {
   width: auto;
   height: 100px;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+
+}
+
+.dropdown .dropbtn {
+  font-size: inherit; 
+  border: none;
+  outline: none;
+  color: var(--clr-accent-100);
+  background-color: inherit;
+  font-family: inherit; 
+  margin: 0; 
+}
+
+.dropdown:hover .dropbtn {
+  color: var(--clr-primary-dark);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--clr-accent-100);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: var(--clr-accent-100);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
 }
 
 @media (max-width: 50em) {
@@ -205,6 +251,11 @@ svg {
     font-weight: var(--fw-bold);
   }
 
+  .nav-list a {
+    text-decoration: none;
+    color: var(--clr-primary-100);
+  }
+
   .primary-navigation[data-visible] {
     display: block;
   }
@@ -223,6 +274,54 @@ svg {
   .mobile-nav-toggle .icon-close {
     display: none;
   }
+  .dropdown {
+    float: left;
+    overflow: hidden;
+
+  }
+
+  .dropdown .dropbtn {
+    font-size: inherit; 
+    border: none;
+    outline: none;
+    color: var(--clr-primary-100);
+    background-color: inherit;
+    font-family: inherit; 
+    margin: 0; 
+    align-items: center;
+
+  }
+
+  .dropdown:hover .dropbtn {
+    color: var(--clr-primary-dark)
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--clr-accent-100);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    float: none;
+    color: var(--clr-primary-100);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  .dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 }
 
   .header-lower {
@@ -231,6 +330,7 @@ svg {
     font-weight: var(--fw-bold);
 
   }
+
 /* footer */
 
 .primary-footer-wrapper {
@@ -322,6 +422,11 @@ svg {
 
 .vertical-align-center {
   align-items: center;
+}
+
+.justify-align-center {
+  display: flex;
+  justify-content: center;
 }
 
 .justify-self-end {
