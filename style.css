@@ -544,11 +544,11 @@ svg {
   padding-bottom: var(--size-200);
 }
 
-.padding-left-100 {
-  padding-bottom: var(--size-200);
+.padding-left-200 {
+  padding-left: var(--size-200);
 }
-.padding-right-100 {
-  padding-bottom: var(--size-200);
+.padding-right-200 {
+  padding-right: var(--size-900);
 }
 
 .margin-bottom-700 {
