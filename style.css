@@ -326,8 +326,7 @@ svg {
   color: var(--clr-primary-100);
   grid-template-areas:
     "sponsors"
-    "nav"
-    "contact";
+    "nav";
   }
 
 .primary-footer-nav {
@@ -346,7 +345,7 @@ svg {
 
 @media (min-width: 50em) {
   .primary-footer-wrapper {
-    grid-template-areas: "sponsors nav contact";
+    grid-template-areas: "sponsors nav";
   }
 }
 
@@ -369,7 +368,7 @@ svg {
 }
 
 .footer-nav a:is(:hover, :focus) {
-  color: var(--clr-accent-100);
+  color: var(--clr-primary-dark);
 }
 
 /* Topics List */
@@ -425,6 +424,10 @@ svg {
 .text-align-left {
   text-align: left;
 }
+.text-align-center {
+  text-align: center;
+}
+
 @media (min-width: 50em) {
   .justify-self-end-md {
     justify-self: end;
@@ -551,6 +554,13 @@ svg {
 }
 .padding-right-200 {
   padding-right: var(--size-900);
+}
+
+.padding-top-700 {
+  padding-top: var(--size-700);
+}
+.padding-bottom-700 {
+  padding-bottom: var(--size-700);
 }
 
 .margin-bottom-700 {
