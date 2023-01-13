@@ -322,7 +322,6 @@ svg {
 
 .primary-footer-wrapper {
   display: grid;
-  gap: var(--size-700);
   color: var(--clr-primary-100);
   grid-template-areas:
     "sponsors"
@@ -331,27 +330,41 @@ svg {
 
 .primary-footer-nav {
   grid-area: nav;
+  padding-top: var(--size-700);
+  padding-bottom: var(--size-700);
 }
 
-.primary-footer-sponsors {
+.primary-footer-sponsor {
   grid-area: sponsors;
-
-}
-
-.primary-footer-contact {
-  grid-area: contact;
+  padding-top: var(--size-700);
+  padding-bottom: var(--size-700);
 
 }
 
 @media (min-width: 50em) {
   .primary-footer-wrapper {
     grid-template-areas: "sponsors nav";
+    gap: var(--size-700);
+
+  }
+  #footer-container {
+    --container-padding: 1rem;
   }
 }
 
 @media (max-width: 50em) {
   .primary-footer-wrapper > * {
     margin-inline: auto;
+    gap: var(--size-300);
+
+  }
+
+  .primary-footer-sponsor {
+    width: 100%
+
+  }
+  #footer-container {
+    --container-padding: 0;
   }
 }
 
@@ -415,6 +428,7 @@ svg {
 .justify-align-center {
   display: flex;
   justify-content: center;
+  align-content: center;
 }
 
 .justify-self-end {
