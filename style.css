@@ -253,7 +253,8 @@ svg {
 
 .header_img {
   width: auto;
-  height: 100px;
+  height: 65px;
+  padding-block: var(--size-300);
 }
 
 @media (max-width: 50em) {
@@ -307,6 +308,7 @@ svg {
   .mobile-nav-toggle .icon-close {
     display: none;
   }
+
 }
 
   .header-lower {
