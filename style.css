@@ -602,6 +602,7 @@ svg {
   overflow: hidden;
   position: relative;
   width:100%;
+  justify-content: center;
 }
 
 .video-container::after {
