@@ -98,6 +98,9 @@
   grid-area: c;
 }
 
+.inlineb {
+  font-weight: bold;
+}
 @media screen and (max-width: 33em) {
   .container-image-area {
       grid-template-areas:
