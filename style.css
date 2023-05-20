@@ -60,6 +60,10 @@
 
 /* General Formatting*/
 
+.emphasis {
+  font-style: italic;
+}
+
 .container-image-area {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
